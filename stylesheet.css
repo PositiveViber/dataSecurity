@@ -1,0 +1,479 @@
+body,
+h1,
+h2,
+p,
+h3,
+header,
+nav,
+ul,
+li,
+a,
+footer,
+section,
+.form-group,
+.additional-contact-info {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography and body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: black;
+    line-height: 1.6;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+/* Header and footer styles */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    background: #302b63;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Navigation styles */
+.main-nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.main-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a.active,
+.main-nav ul li a:hover {
+    color: #a1cbef;
+}
+
+/* Icon Images */
+
+.nav-icon {
+    width: 50px;
+    /* Icon size */
+    height: auto;
+    /* Maintain aspect ratio */
+    cursor: pointer;
+    /* Remove the absolute positioning here */
+}
+
+.nav-list {
+    display: flex;
+    /* Make the nav list flex for alignment */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    /* Aligns the navigation links vertically */
+    /* Rest of your styles... */
+}
+
+.nav-item {
+    position: relative;
+    /* To position the ::after pseudo-element absolutely relative to the .nav-item */
+    display: inline-block;
+    /* To allow the use of position: relative */
+    margin-right: 20px;
+    /* Adjust margin as needed */
+    /* ... */
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+    overflow: hidden;
+    /* To keep the pseudo-element within the confines of the .nav-link */
+    /* ... */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    /* Start below the element */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    /* Line color */
+    transform: scaleX(0);
+    /* Start with the line scaled to 0 */
+    transform-origin: bottom right;
+    /* Animate from the bottom right */
+    transition: transform 0.3s, transform-origin 0.3s;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    /* Scale the line to its full width */
+    transform-origin: bottom left;
+    /* Now animate from the bottom left */
+}
+
+.left-icon {
+    left: 40px;
+}
+
+#right-icon {
+    left: 400px;
+}
+
+/* Pulse effect on hover */
+@keyframes pulse {
+    0% {
+        transform: scale(1) translateY(0%);
+    }
+
+    50% {
+        transform: scale(1.2) translateY(-5%);
+        /* Scale the icon up */
+    }
+
+    100% {
+        transform: scale(1) translateY(0%);
+    }
+}
+
+.nav-icon:hover {
+    animation: pulse 1s infinite;
+}
+
+
+.site-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* centers items on the line (horizontally) */
+    align-content: center;
+    /* centers lines in the flex container (vertically) */
+    height: calc(100vh - 140px);
+    /* adjusts for the height of header and footer */
+    margin: auto;
+    /* centers the container */
+    padding: 20px;
+    /* adds some space inside the container */
+}
+
+
+.contact-article {
+    max-width: none;
+    /* Removes max-width restriction */
+    width: 90%;
+    /* Use a percentage of the viewport width */
+    padding: 40px;
+    /* Add more padding for spacing */
+    margin: 20px auto;
+    /* Center the article on the page with top and bottom margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adjust as needed */
+    border-radius: 8px;
+    /* Adjust as needed */
+    background-color: #ffffff;
+    /* Adjust as needed */
+    display: flex;
+    /* Use flexbox for inner alignment */
+    flex-direction: column;
+    /* Stack children elements vertically */
+    justify-content: center;
+    /* Center children elements vertically */
+    align-items: center;
+    /* Center children elements horizontally */
+    transition: all 0.3s ease;
+    /* Smooth transition for all properties */
+}
+
+
+/* Add this at the bottom of your CSS file */
+@keyframes flashing {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+.section-title {
+    color: #333;
+    text-align: center;
+}
+
+.contact-intro,
+.additional-contact-info {
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    animation: flashing 2s infinite;
+    /* Apply the flashing effect */
+    background-color: #302b63;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: black;
+}
+
+.additional-contact-info {
+    margin-top: 20px;
+}
+
+.additional-contact-info p,
+.additional-contact-info h3 {
+    margin-bottom: 10px;
+}
+
+
+/* Section Styling for hover effect and box presentation */
+.info-section {
+    flex: 0 0 calc(33.333% - 40px);
+    /* Subtract the total gap size divided by the number of items per row */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    /* subtle border */
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Set a fixed height or min-height if you want all boxes to be the same height */
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+
+}
+
+.full-width-section {
+    flex: 0 0 calc(98% - 40px);
+    /* Subtract the total gap size divided by the number of items per row */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    /* subtle border */
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    display: block;
+    /* This ensures the section takes full width */
+}
+
+/* Responsive considerations for smaller screens */
+@media (max-width: 768px) {
+    .info-section {
+        width: 50%;
+        /* Each section takes full width on smaller screens */
+    }
+
+    /* Each section takes full width on smaller screens */
+    .nav-icon {
+        width: 40px;
+        /* Smaller icon size for small screens */
+    }
+}
+
+.info-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Styling */
+
+/* Fullscreen Modal Styling */
+/* Full-screen modal styling */
+/* Full-screen modal background */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    /* Margin auto for auto-adjusting margins */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    /* For absolute positioning of close button */
+    max-width: 600px;
+    /* Max width for large screens */
+    width: 90%;
+    /* Responsive width on small screens */
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+
+/* Tips Carousel Enhancements */
+.tips-carousel {
+    display: flex;
+    justify-content: center;
+    /* Center carousel items */
+    align-items: center;
+    /* Space between items and buttons */
+}
+
+.tip-item {
+    background: #e8e8e8;
+    /* Light background for tip items */
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Center align text */
+    /* Additional styles to ensure proper spacing and appearance */
+    display: block;
+    /* or flex, if you want to use Flexbox */
+    margin: auto;
+    /* Center the box itself if needed */
+    padding: 10px;
+    /* Or any other value to maintain spacing inside the box */
+}
+
+
+/* Carousel Button Enhancements */
+.carousel-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Resource List Enhancements */
+.resource-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-list li {
+    background: #f9f9f9;
+    /* Slightly different background for each resource */
+    margin-bottom: 10px;
+    /* Spacing between resource items */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.resource-link {
+    color: #005A9C;
+    text-decoration: none;
+    /* Removes underline */
+    transition: color 0.3s ease-in-out;
+}
+
+.resource-link:hover {
+    color: #003d66;
+    /* Darkens the color on hover */
+}
+
+.site-footer {
+    position: relative;
+    /* changed from 'absolute' to 'relative' */
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Add a little space at the bottom to avoid content overlap */
+body {
+
+    /* Higher than footer to ensure visibility */
+}
