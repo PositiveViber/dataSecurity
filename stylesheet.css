@@ -81,7 +81,7 @@ body {
     align-items: center;
     /* Aligns the navigation links vertically */
     /* Rest of your styles... */
-    
+
 }
 
 .nav-item {
@@ -108,52 +108,54 @@ body {
 
 .nav-link::before,
 .nav-link::after {
- 
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-  left: 0;
-  transition: transform 2s ease;
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    left: 0;
+    transition: transform 2s ease;
 }
 
 .nav-link::before {
-  top: 100%;
-  transform: scaleY(0);
-  transform-origin: bottom left;
+    top: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom left;
 }
 
 .nav-link::after {
-      animation: box-fade-out 2s forwards;
-      animation-direction: reverse;
-  animation-fill-mode: forwards;    
-  bottom: 0;
-  transform: scaleX(0);
-  transform-origin: bottom left;
+    animation: box-fade-out 2s forwards;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
 }
 
 .nav-item:hover .nav-link::before {
-  transform: scaleY(1);
-  transition: transform 0.5s ease;
+    transform: scaleY(1);
+    transition: transform 0.5s ease;
 }
 
 .nav-item:hover .nav-link::after {
-  transform: scaleX(1);
-  transition: transform 2s ease 0.5s; /* Delay the horizontal line animation */
+    transform: scaleX(1);
+    transition: transform 2s ease 0.5s;
+    /* Delay the horizontal line animation */
 }
 
 .nav-item:hover .nav-link {
-  animation: box-animation 2s 0.5s forwards;
+    animation: box-animation 2s 0.5s forwards;
 }
 
 @keyframes box-animation {
-  from {
-    border: 2px solid transparent;
-  }
-  to {
-    border: 2px solid #ffffff;
-  }
+    from {
+        border: 2px solid transparent;
+    }
+
+    to {
+        border: 2px solid #ffffff;
+    }
 }
 
 .left-icon {
@@ -162,13 +164,15 @@ body {
 
 
 @keyframes box-fade-out {
-  from {
-    border-color: #ffffff;
-  }
-  to {
-    border-color: transparent;
-  }
+    from {
+        border-color: #ffffff;
+    }
+
+    to {
+        border-color: transparent;
+    }
 }
+
 /* Pulse effect on hover */
 @keyframes pulse {
     0% {
@@ -193,11 +197,15 @@ body {
 .site-main {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center children */
-    justify-content: flex-start; /* Align children to the start */
-    padding: 2rem; /* Add padding for inner spacing */
-    max-width: 100%; /* Ensure it's not restricting content width */
-        
+    align-items: center;
+    /* Center children */
+    justify-content: flex-start;
+    /* Align children to the start */
+    padding: 2rem;
+    /* Add padding for inner spacing */
+    max-width: 100%;
+    /* Ensure it's not restricting content width */
+
 }
 
 
@@ -226,8 +234,10 @@ body {
     align-items: center;
     /* Center children elements horizontally */
     transition: all 0.3s ease;
-    /* Smooth transition for all properties */\
-    color: black; /* Or any color that matches the main page */
+    /* Smooth transition for all properties */
+    \
+ color: black;
+    /* Or any color that matches the main page */
 }
 
 
@@ -510,10 +520,12 @@ body {
         opacity: 0;
         transform: scale(0);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.2);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -523,7 +535,8 @@ body {
 
 /* Applied when the quiz container becomes visible */
 .quiz-visible {
-    display: block; /* Make the container visible */
+    display: block;
+    /* Make the container visible */
     animation: revealEffect 1s forwards;
     /* No need to set opacity or transform here since it's handled in the animation */
 }
@@ -590,6 +603,7 @@ button:hover {
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
         display: none;
@@ -597,7 +611,9 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .quiz-container, .sidebar {
+
+    .quiz-container,
+    .sidebar {
         width: 90%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
@@ -623,24 +639,30 @@ button:hover {
 
 .quiz-container {
     max-width: 600px;
-    margin: 6rem auto; /* This provides space at the top and bottom */
+    margin: 6rem auto;
+    /* This provides space at the top and bottom */
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative; /* Changed to relative for stacking context */
-    z-index: 2; /* Ensures quiz is above other content */
+    position: relative;
+    /* Changed to relative for stacking context */
+    z-index: 2;
+    /* Ensures quiz is above other content */
 }
 
 .sidebar {
     max-width: 600px;
-    margin: 2rem auto; /* This provides space at the top and bottom */
+    margin: 2rem auto;
+    /* This provides space at the top and bottom */
     padding: 0px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative; /* Changed to relative for stacking context */
-    z-index: 2; /* Ensures quiz is above other content */
+    position: relative;
+    /* Changed to relative for stacking context */
+    z-index: 2;
+    /* Ensures quiz is above other content */
 }
 
 
@@ -650,9 +672,12 @@ button:hover {
 
 /* Vertical float animation */
 @keyframes verticalFloat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -668,8 +693,10 @@ button:hover {
     0% {
         transform: scale(1);
     }
+
     100% {
-        transform: scale(1.1); /* Slightly larger on hover */
+        transform: scale(1.1);
+        /* Slightly larger on hover */
     }
 }
 
@@ -677,54 +704,70 @@ button:hover {
 @media screen and (min-width: 1024px) {
     .sidebar {
         margin-top: 2rem;
-            max-width: 600px;
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    margin-top: 1%;
-    padding-left: 200px;
-    padding-right: 200px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 500px;
-}
+        max-width: 600px;
+        display: flex;
+        /* Use flexbox for layout */
+        flex-direction: column;
+        /* Stack children vertically */
+        align-items: center;
+        /* Center items horizontally */
+        justify-content: center;
+        /* Center items vertically */
+        margin-top: 1%;
+        padding-left: 200px;
+        padding-right: 200px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 500px;
+    }
+
     .quiz-container {
-        margin-left: auto; /* Align to the right side */
+        margin-left: auto;
+        /* Align to the right side */
         transform: translateY(-50%);
         top: 50%;
-        position: absolute; /* Aligns the quiz container to center right */
+        position: absolute;
+        /* Aligns the quiz container to center right */
     }
 }
 
-@media screen and (max-width: 1870px) {
-   .sidebar {
-        display: none; /* Hide sidebar */
+@media screen and (max-width: 1025px) {
+    .sidebar {
+        display: none;
+        /* Hide sidebar */
     }
+
     .quiz-container {
         /* Take full width minus some margin */
         width: calc(100% - 2rem);
         margin: 0 1rem;
-        position: relative; /* Resets to flow within document */
-        top: 0; /* Reset top */
-        transform: none; /* Remove transform */
+        position: relative;
+        /* Resets to flow within document */
+        top: 0;
+        /* Reset top */
+        transform: none;
+        /* Remove transform */
     }
 }
 
 @media (max-width: 768px) {
+
     .quiz-container,
     .sidebar {
         width: 90%;
         transform: translateY(-50%) translateX(-50%);
         left: 50%;
-        position: relative; /* Use relative for smaller screens */
-        margin-top: 1rem; /* Add margin on top for spacing */
+        position: relative;
+        /* Use relative for smaller screens */
+        margin-top: 1rem;
+        /* Add margin on top for spacing */
     }
 
     .sidebar {
-        order: -1; /* Sidebar above the quiz container */
+        order: -1;
+        /* Sidebar above the quiz container */
     }
 }
 
@@ -732,6 +775,7 @@ button:hover {
     0% {
         transform: translateY(-50%) translateX(0);
     }
+
     100% {
         transform: translateY(-50%) translateX(-10px);
     }
@@ -782,7 +826,10 @@ button:hover {
 }
 
 /* Add a little space at the bottom to avoid content overlap */
-#startQuiz, #prev, #next, #submit {
+#startQuiz,
+#prev,
+#next,
+#submit {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -799,7 +846,10 @@ button:hover {
     transition: color 0.3s, box-shadow 0.3s, transform 0.2s;
 }
 
-#startQuiz::after, #prev::after, #next::after, #submit::after {
+#startQuiz::after,
+#prev::after,
+#next::after,
+#submit::after {
     content: '';
     position: absolute;
     top: 0;
@@ -812,22 +862,34 @@ button:hover {
     transform: translateX(-100%) skewX(-15deg);
 }
 
-#startQuiz:hover::after, #prev:hover::after, #next:hover::after, #submit:hover::after {
+#startQuiz:hover::after,
+#prev:hover::after,
+#next:hover::after,
+#submit:hover::after {
     transform: translateX(100%) skewX(-15deg);
 }
 
-#startQuiz:hover, #prev:hover, #next:hover, #submit:hover {
+#startQuiz:hover,
+#prev:hover,
+#next:hover,
+#submit:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
 
-#prev, #next {
+#prev,
+#next {
     position: absolute;
-    bottom: -50px; /* Adjust as necessary to position the buttons */
-    width: 150px; /* Set a fixed width */
-    height: 40px; /* Set a fixed height */
-    line-height: 40px; /* Align text vertically */
-    padding: 0; /* Remove padding if you're setting explicit dimensions */
+    bottom: -50px;
+    /* Adjust as necessary to position the buttons */
+    width: 150px;
+    /* Set a fixed width */
+    height: 40px;
+    /* Set a fixed height */
+    line-height: 40px;
+    /* Align text vertically */
+    padding: 0;
+    /* Remove padding if you're setting explicit dimensions */
     border: none;
     border-radius: 5px;
     color: white;
@@ -838,109 +900,133 @@ button:hover {
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s, box-shadow 0.3s, transform 0.2s;
-    text-align: center; /* Ensure text is centered */
-    font-size: 12px; /* Set a smaller font size */
+    text-align: center;
+    /* Ensure text is centered */
+    font-size: 12px;
+    /* Set a smaller font size */
 }
+
 #prev {
-    left: 0; /* Position the previous button to the left corner */
+    left: 0;
+    /* Position the previous button to the left corner */
 }
 
 #next {
-    right: 0; /* Position the next button to the right corner */
+    right: 0;
+    /* Position the next button to the right corner */
 }
+
 #prev .button-text,
 #next .button-text {
     display: block;
-    font-size: 0.8em; /* Smaller text size */
+    font-size: 0.8em;
+    /* Smaller text size */
 }
 
 /* ARTICLES IN INFO PAGE */
 
 #article-summary {
-  background-color: #302b63;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px auto;
-  max-width: 600px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  transform: translateY(0);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+    background-color: #302b63;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 #article-summary:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
 }
 
 .summary-container {
     display: flex;
-    justify-content: space-around; /* This will space out the child elements evenly */
-    align-items: flex-start; /* Aligns items to the top */
-    margin: 1rem auto; /* Adds margin at the top and bottom */
-    padding: 0 1rem; /* Adds some padding on the sides */
+    justify-content: space-around;
+    /* This will space out the child elements evenly */
+    align-items: flex-start;
+    /* Aligns items to the top */
+    margin: 1rem auto;
+    /* Adds margin at the top and bottom */
+    padding: 0 1rem;
+    /* Adds some padding on the sides */
 }
 
 .article-summary {
-    flex: 1; /* Each summary will take equal width */
-    margin: 0 1rem; /* Adds margin between each summary box */
-    padding: 1rem; /* Adds padding inside each summary box */
-    text-align: left; /* Aligns the text to the left */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    flex: 1;
+    /* Each summary will take equal width */
+    margin: 0 1rem;
+    /* Adds margin between each summary box */
+    padding: 1rem;
+    /* Adds padding inside each summary box */
+    text-align: left;
+    /* Aligns the text to the left */
+    border-radius: 10px;
+    /* Optional: Adds rounded corners */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adds a subtle shadow */
 }
 
 /* Responsive layout adjustments */
 @media (max-width: 768px) {
     .summary-container {
-        flex-direction: column; /* Stacks the summaries vertically on smaller screens */
+        flex-direction: column;
+        /* Stacks the summaries vertically on smaller screens */
     }
 
     .article-summary {
-        margin-bottom: 1rem; /* Adds margin at the bottom of each summary */
+        margin-bottom: 1rem;
+        /* Adds margin at the bottom of each summary */
     }
 }
 
 .research-link {
-  display: inline-block;
-  background-color: #4ca1af;
-  color: white;
-  padding: 10px 15px;
-  margin-top: 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    background-color: #4ca1af;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .research-link:hover {
-  background-color: #3b8d99;
+    background-color: #3b8d99;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #article-summary {
-  animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 1s ease-out forwards;
 }
 
-#latest-research, #data-security {
-  position: relative;
-  top: -60%; /* Adjust the value as needed to move them up */
+#latest-research,
+#data-security {
+    position: relative;
+    top: -60%;
+    /* Adjust the value as needed to move them up */
 }
 
 /* Adjust the position of the third section to move it down */
 #privacycon-insights {
-  position: relative;
-  top: 65%; /* Adjust the value as needed to move it down */
+    position: relative;
+    top: 65%;
+    /* Adjust the value as needed to move it down */
 }
 
 .accordion {
@@ -973,7 +1059,8 @@ button:hover {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-    .content-section {
+
+.content-section {
     top:
 
 }
@@ -981,11 +1068,13 @@ button:hover {
 /* This is for responsive design, adjust the breakpoint as necessary */
 @media (max-width: 768px) {
     .site-main {
-        flex-direction: column; /* Stack sections on top of each other */
+        flex-direction: column;
+        /* Stack sections on top of each other */
     }
 
     .content-section {
-        width: 100%; /* Full width sections */
+        width: 100%;
+        /* Full width sections */
     }
 }
 
@@ -1028,37 +1117,49 @@ button:hover {
         opacity: 0;
         max-height: 0;
     }
+
     100% {
         opacity: 1;
-        max-height: 500px; /* Adjust as needed for content */
+        max-height: 500px;
+        /* Adjust as needed for content */
     }
 }
 
 .content-section {
-    background-color: white; /* White background */
+    background-color: white;
+    /* White background */
     margin: 10px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 600px; /* Consistent width */
-    margin-bottom: 20px; /* Space between sections */
+    max-width: 600px;
+    /* Consistent width */
+    margin-bottom: 20px;
+    /* Space between sections */
     /* Rest of your styles */
 }
 
 .site-main-hub {
     display: flex;
-    flex-direction: row; /* Align items horizontally */
+    flex-direction: row;
+    /* Align items horizontally */
     flex-wrap: wrap;
-    justify-content: center; /* Center items horizontally */
-    align-items: flex-start; /* Align items to the top */
-    gap: 20px; /* Space between sections */
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: flex-start;
+    /* Align items to the top */
+    gap: 20px;
+    /* Space between sections */
     padding: 5rem;
 }
+
 /* This will ensure the sections stack on smaller screens */
 @media (max-width: 768px) {
     .content-section {
-        max-width: 100%; /* Full width on small screens */
-        margin: 1rem 0; /* Only vertical margin */
+        max-width: 100%;
+        /* Full width on small screens */
+        margin: 1rem 0;
+        /* Only vertical margin */
     }
 }
 
@@ -1094,10 +1195,15 @@ button:hover {
 }
 
 .interview-section {
-    background-color: #302b63; /* Match the dark blue shade of the main page */
+    background-color: #302b63;
+    /* Match the dark blue shade of the main page */
     color: white;
-    border-radius: 8px; /* For rounded corners */
-    margin: 20px auto; /* Center the section */
-    max-width: 600px; /* To maintain consistency with the size */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* To add depth */
+    border-radius: 8px;
+    /* For rounded corners */
+    margin: 20px auto;
+    /* Center the section */
+    max-width: 600px;
+    /* To maintain consistency with the size */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    /* To add depth */
 }
