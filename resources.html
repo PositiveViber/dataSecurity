@@ -41,48 +41,6 @@
         <!-- ... -->
     </div>
 </section>
-<div class="resource-tabs">
-  <div class="tab">
-    <button class="tablinks" onclick="openResource(event, 'Learning')">Online Learning Platforms</button>
-    <button class="tablinks" onclick="openResource(event, 'Blogs')">Tech Blogs and Articles</button>
-    <!-- More tabs for different categories -->
-  </div>
-
-  <div id="Learning" class="tabcontent">
-    <!-- Content for Online Learning Platforms -->
-    <h3>Online Learning Platforms</h3>
-    <ul>
-      <!-- List items -->
-    </ul>
-  </div>
-
-  <div id="Blogs" class="tabcontent">
-    <!-- Content for Tech Blogs and Articles -->
-    <h3>Informative Tech Blogs and Articles</h3>
-    <ul>
-      <!-- List items -->
-    </ul>
-  </div>
-  
-  <!-- More content sections for other tabs -->
-</div>
-
-<script>
-// Script to make tabs work
-function openResource(evt, resourceName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(resourceName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
 
         
     </main>
