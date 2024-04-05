@@ -1,5 +1,46 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+
+
+    
+    
+        const messages = document.querySelectorAll('.message');
+    let delay = 0;
+
+    messages.forEach(message => {
+        setTimeout(() => {
+            message.style.opacity = '1';
+            message.style.transform = 'translateY(0)';
+        }, delay);
+        delay += 500; // Delay in milliseconds
+    });
+    // Initial setup for accordion
+    document.querySelectorAll('.accordion-content').forEach(content => {
+        content.style.maxHeight = 0; // Ensure all accordion content areas are closed initially
+    });
+
+    // Accordion toggle functionality
+    document.querySelectorAll('.accordion-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const accordionContent = button.nextElementSibling;
+
+            // Close any open accordion item before toggling
+            document.querySelectorAll('.accordion-button').forEach(innerButton => {
+                if (innerButton !== button) {
+                    innerButton.classList.remove('accordion-button-active');
+                    innerButton.nextElementSibling.style.maxHeight = 0;
+                }
+            });
+
+            // Toggle the clicked accordion item
+            button.classList.toggle('accordion-button-active');
+            if (button.classList.contains('accordion-button-active')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+            } else {
+                accordionContent.style.maxHeight = 0;
+            }
+        });
+    });
     // Page Fade-in effect for body elements
     const bodyElements = document.querySelectorAll('main, .site-footer');
 
@@ -20,12 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
     function hideModal() {
         modal.style.display = "none";
     }
+    
 
     document.getElementById('left-icon').addEventListener('click', function () {
-        window.location.href = 'index.html'; // Redirects to the main page
-    });
-
-    document.getElementById('right-icon').addEventListener('click', function () {
         window.location.href = 'index.html'; // Redirects to the main page
     });
 
@@ -71,6 +109,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize the first item to show
     showItem(currentItem);
 
-    // Drag and drop functionality
-    // ... (keep the existing drag-and-drop code here)
+
 });

@@ -13,7 +13,6 @@
     <header class="site-header">
         <img src="icon.png" alt="Icon" class="nav-icon" id="left-icon" />
         <h1 class="title">Resources</h1>
-        <img src="icon.png" alt="Icon" class="nav-icon" id="right-icon" />
         <nav class="main-nav">
             <ul class="nav-list">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
@@ -26,10 +25,66 @@
         </nav>
     </header>
     <main class="site-main">
-        <section class="content-section">
-            <h2>Big Data Analytics and Security Management</h2>
-            <p>A curated list of articles, books, and tools on Big Data analytics and security management.</p>
-        </section>
+        <section class="interview-section">
+    <h2>Insights on Big Data and Security Flaws - An Interview With Mark Kolenz</h2>
+    <h4>Director and Coordinator of the I.T. Helpdesk</h4>
+    <div class="interview-dialogue">
+        <!-- Greg's questions -->
+        <div class="message from-greg">
+            <p>What are your main responsibilities in IT regarding big data systems?</p>
+        </div>
+        <!-- Mark's answers -->
+        <div class="message from-mark">
+            <p>As Director of IT, my responsibilities involve overseeing the data infrastructure and ensuring its security through various measures, like rigorous access controls and encryption.</p>
+        </div>
+        <!-- Continue the conversation -->
+        <!-- ... -->
+    </div>
+</section>
+<div class="resource-tabs">
+  <div class="tab">
+    <button class="tablinks" onclick="openResource(event, 'Learning')">Online Learning Platforms</button>
+    <button class="tablinks" onclick="openResource(event, 'Blogs')">Tech Blogs and Articles</button>
+    <!-- More tabs for different categories -->
+  </div>
+
+  <div id="Learning" class="tabcontent">
+    <!-- Content for Online Learning Platforms -->
+    <h3>Online Learning Platforms</h3>
+    <ul>
+      <!-- List items -->
+    </ul>
+  </div>
+
+  <div id="Blogs" class="tabcontent">
+    <!-- Content for Tech Blogs and Articles -->
+    <h3>Informative Tech Blogs and Articles</h3>
+    <ul>
+      <!-- List items -->
+    </ul>
+  </div>
+  
+  <!-- More content sections for other tabs -->
+</div>
+
+<script>
+// Script to make tabs work
+function openResource(evt, resourceName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(resourceName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+        
     </main>
     <footer class="site-footer">
         <p>&copy; 2024 Big Data Security & Privacy Tips</p>
